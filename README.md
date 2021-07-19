@@ -1,5 +1,8 @@
 # DataEaze_assignment
 
+Pre-requisites:
+     To run this code,You should have spark installed on your machine.
+
 Step 1:
      Download files abcd.sh and q1scala.scala.
      
