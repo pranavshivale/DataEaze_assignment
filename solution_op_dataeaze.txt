@@ -40,11 +40,11 @@ Spark context Web UI available at http://ip-10-233-10-4.e1.ngap2.nike.com:4044
 Spark context available as 'sc' (master = yarn, app id = application_1626678966351_0008).
 Spark session available as 'spark'.
 21/07/19 12:18:43 WARN HiveConf: HiveConf of name hive.server2.thrift.url does not exist
-+--------+---------+
-|count(1)|max(City)|
-+--------+---------+
-|     105|     City|
-+--------+---------+
++----+--------+
+|City|count(1)|
++----+--------+
+|Pune|     105|
++----+--------+
 
 +----+-------------------+--------+
 |City|    InvestmentnType|count(1)|
