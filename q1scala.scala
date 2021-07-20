@@ -3,7 +3,7 @@ val df1=spark.read.format("csv").option("header",true).load("s3://ngap2-user-dat
 val df2=spark.read.format("parquet").option("header",true).load("s3://ngap2-user-data/dsmimengineeringnonprod/PSadan/consumerInternet.parquet")
 val finalDf=df1.union(df2)
 finalDf.createOrReplaceTempView("startup_data")
-val q1_op=spark.sql("select count(*),max('City') from startup_data where City='Pune' ")
+val q1_op=spark.sql("select max(City) as City,count(*) from Pune_startup where City='Pune'")
 q1_op.show()
 q1_op.write.format("csv").option("header", "true").save("s3://ngap2-user-data/dsmimengineeringnonprod/PSadan/tmp/output/q1")
 val q2_op=spark.sql("select City,InvestmentnType,count(*) from startup_data where City='Pune' group by City,InvestmentnType having InvestmentnType = 'Seed/ Angel Funding'")
